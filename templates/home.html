@@ -1,0 +1,262 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Agricultural Yields for Each Commodity</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Agricultural Yields for Each Commodity</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Province Name</label>
+            <select class="form-control" name="province_name" placeholder="Enter the province name" required>
+                <option class="placeholder" selected disabled value="">Select province name</option>
+                <option value="aceh">
+                    aceh
+                </option>
+                <option value="sumatera utara">
+                    sumatera utara
+                </option>
+                <option value="sumatera barat">
+                    sumatera barat
+                </option>
+                <option value="riau">
+                    riau
+                </option>
+                <option value="jambi">
+                    jambi
+                </option>
+                <option value="sumatera selatan">
+                    sumatera selatan
+                </option>
+                <option value="bengkulu">
+                    bengkulu
+                </option>
+                <option value="lampung">
+                    lampung
+                </option>
+                <option value="kep. bangka belitung">
+                    kep. bangka belitung
+                </option>
+                <option value="kep. riau">
+                    kep. riau
+                </option>
+                <option value="dki jakarta">
+                    dki jakarta
+                </option>
+                <option value="jawa barat">
+                    jawa barat
+                </option>
+                <option value="jawa tengah">
+                    jawa tengah
+                </option>
+                <option value="di yogyakarta">
+                    di yogyakarta
+                </option>
+                <option value="jawa timur">
+                    jawa timur
+                </option>
+                <option value="banten">
+                    banten
+                </option>
+                <option value="bali">
+                    bali
+                </option>
+                <option value="nusa tenggara barat">
+                    nusa tenggara barat
+                </option>
+                <option value="nusa tenggara timur">
+                    nusa tenggara timur
+                </option>
+                <option value="kalimantan barat">
+                    kalimantan barat
+                </option>
+                <option value="kalimantan tengah">
+                    kalimantan tengah
+                </option>
+                <option value="kalimantan selatan">
+                    kalimantan selatan
+                </option>
+                <option value="kalimantan timur">
+                    kalimantan timur
+                </option>
+                <option value="kalimantan utara">
+                    kalimantan utara
+                </option>
+                <option value="sulawesi utara">
+                    sulawesi utara
+                </option>
+                <option value="sulawesi tengah">
+                    sulawesi tengah
+                </option>
+                <option value="sulawesi selatan">
+                    sulawesi selatan
+                </option>
+                <option value="sulawesi tenggara">
+                    sulawesi tenggara
+                </option>
+                <option value="gorontalo">
+                    gorontalo
+                </option>
+                <option value="sulawesi barat">
+                    sulawesi barat
+                </option>
+                <option value="maluku">
+                    maluku
+                </option>
+                <option value="maluku utara">
+                    maluku utara
+                </option>
+                <option value="papua barat">
+                    papua barat
+                </option>
+                <option value="papua">
+                    papua
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Commodity Name</label>
+            <select class="form-control" name="nama_komoditas" placeholder="Enter commodity name" required>
+                <option class="placeholder" selected disabled value="">Select Commodity Name</option>
+                <option value="Bawang Merah (Ton)">
+                    Bawang Merah (Ton)
+                </option>
+                <option value="Bawang Putih (Ton)">
+                    Bawang Putih (Ton)
+                </option>
+                <option value="Bawang Daun (Ton)">
+                    Bawang Daun (Ton)
+                </option>
+                <option value="Labu Siam (Ton)">
+                    Labu Siam (Ton)
+                </option>
+                <option value="Kembang Kol (Ton)">
+                    Kembang Kol (Ton)
+                </option>
+                <option value="Jamur (Ton)">
+                    Jamur (Ton)
+                </option>
+                <option value="Cabai Rawit (Ton)">
+                    Cabai Rawit (Ton)
+                </option>
+                <option value="Kubis (Ton)">
+                    Kubis (Ton)
+                </option>
+                <option value="Paprika (Ton)">
+                    Paprika (Ton)
+                </option>
+                <option value="Kacang Panjang (Ton)">
+                    Kacang Panjang (Ton)
+                </option>
+                <option value="Lobak (Ton)">
+                    Lobak (Ton)
+                </option>
+                <option value="Kacang Merah (Ton)">
+                    Kacang Merah (Ton)
+                </option>
+                <option value="Buncis (Ton)">
+                    Buncis (Ton)
+                </option>
+                <option value="Terung (Ton)">
+                    Terung (Ton)
+                </option>
+                <option value="Tomat (Ton)">
+                    Tomat (Ton)
+                </option>
+                <option value="Kangkung (Ton)">
+                    Kangkung (Ton)
+                </option>
+                <option value="Petai (Ton)">
+                    Petai (Ton)
+                </option>
+                <option value="Jengkol (Ton)">
+                    Jengkol (Ton)
+                </option>
+                <option value="Petsai/Sawi (Ton)">
+                    Petsai/Sawi (Ton)
+                </option>
+                <option value="Bayam (Ton)">
+                    Bayam (Ton)
+                </option>
+                <option value="Cabai Besar (Ton)">
+                    Cabai Besar (Ton)
+                </option>
+                <option value="Kentang (Ton)">
+                    Kentang (Ton)
+                </option>
+                <option value="Ketimun (Ton)">
+                    Ketimun (Ton)
+                </option>
+                <option value="Wortel (Ton)">
+                    Wortel (Ton)
+                </option>
+                <option value="Melinjo (Ton)">
+                    Melinjo (Ton)
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Minimum Themperature</label>
+            <input class="form-control" type="number" name="Tn"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maximum Themperature</label>
+            <input class="form-control" type="number" name="Tx"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Average Themperature</label>
+            <input class="form-control" type="number" name="Tavg"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Average Humidity</label>
+            <input class="form-control" type="number" name="RH_avg"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rain Fall</label>
+            <input class="form-control" type="number" name="RR"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sunshine Duration</label>
+            <input class="form-control" type="number" name="ss"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Max Wind Speed</label>
+            <input class="form-control" type="number" name="ff_x"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">wind direction at maximum speed (°)</label>
+            <input class="form-control" type="number" name="ddd_x"
+                placeholder="Enter your Reading Score" min='0' max='360' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Average Wind Speed</label>
+            <input class="form-control" type="number" name="ff_avg"
+                placeholder="Enter your Reading Score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">luar_wilayah_hektar</label>
+            <input class="form-control" type="number" name="luar_wilayah_hektar"
+                placeholder="Enter your Reading Score" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Year</label>
+            <input class="form-control" type="number" name="tahun"
+                placeholder="Enter your Reading Score" />
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict yield of Agriculture" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
