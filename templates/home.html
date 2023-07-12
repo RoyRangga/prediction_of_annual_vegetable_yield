@@ -4,9 +4,9 @@
        <h1>Agricultural Yields for Each Commodity</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Agricultural Yields for Each Commodity</legend>
-        </h1>
+        <h3>
+            <legend>Please input all variable for predicting the yealds of vegetables comcodity</legend>
+        </h3>
         <div class="mb-3">
             <label class="form-label">Province Name</label>
             <select class="form-control" name="province_name" placeholder="Enter the province name" required>
@@ -198,65 +198,65 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Minimum Themperature</label>
-            <input class="form-control" type="number" name="Tn"
-                placeholder="Enter your Reading score" min='0' max='100' />
+            <input class="form-control" type="number" name="Tn" step="0.001"
+                placeholder="the range is 0-100" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Maximum Themperature</label>
-            <input class="form-control" type="number" name="Tx"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="Tx" step="0.001"
+                placeholder="the range is 0-100" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Average Themperature</label>
-            <input class="form-control" type="number" name="Tavg"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="Tavg" step="0.001"
+                placeholder="the range is 0-100" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Average Humidity</label>
-            <input class="form-control" type="number" name="RH_avg"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="RH_avg" step="0.01"
+                placeholder="the range is 0-100 percent" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Rain Fall</label>
-            <input class="form-control" type="number" name="RR"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="RR" step="0.00001"
+                placeholder="the range is 0-100" min='0' max='100' />
         </div>
         <div class="mb-3">
             <label class="form-label">Sunshine Duration</label>
-            <input class="form-control" type="number" name="ss"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="ss" step="0.00001"
+                placeholder="the range is 0-24 hour" min='0' max='24' />
         </div>
         <div class="mb-3">
             <label class="form-label">Max Wind Speed</label>
-            <input class="form-control" type="number" name="ff_x"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+            <input class="form-control" type="number" name="ff_x" step="0.00001"
+                placeholder="the range is 0-25" min='0' max='25' />
         </div>
         <div class="mb-3">
             <label class="form-label">wind direction at maximum speed (°)</label>
-            <input class="form-control" type="number" name="ddd_x"
-                placeholder="Enter your Reading Score" min='0' max='360' />
+            <input class="form-control" type="number" name="ddd_x" step="0.00001"
+                placeholder="the range is 0-360 degree" min='0' max='360' />
         </div>
         <div class="mb-3">
             <label class="form-label">Average Wind Speed</label>
             <input class="form-control" type="number" name="ff_avg"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+                placeholder="the range is 0-25" min='0' max='25' />
         </div>
         <div class="mb-3">
             <label class="form-label">luar_wilayah_hektar</label>
             <input class="form-control" type="number" name="luar_wilayah_hektar"
-                placeholder="Enter your Reading Score" />
+                placeholder="Enter the value of the area of ​​the province" />
         </div>
         <div class="mb-3">
             <label class="form-label">Year</label>
             <input class="form-control" type="number" name="tahun"
-                placeholder="Enter your Reading Score" />
+                placeholder="enter the year" />
         </div>
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict yield of Agriculture" required />
         </div>
     </form>
     <h2>
-       THE  prediction is {{results}}
+       The prediction for vegetables commodities yeald is {{results}}
     </h2>
    <body>
 </html>
