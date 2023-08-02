@@ -30,29 +30,29 @@ class CustomData:
     def __init__(self,
                  province_name:str,
                  nama_komoditas:str,
-                 Tn:float,
-                 Tx:float,
+#                 Tn:float,
+#                 Tx:float,
                  Tavg:float,
-                 RH_avg:float,
+#                 RH_avg:float,
                  RR:float,
                  ss:float,
-                 ff_x:float,
-                 ddd_x:float,
-                 ff_avg:float,
+#                 ff_x:float,
+#                 ddd_x:float,
+#                 ff_avg:float,
                  luar_wilayah_hektar:float,
                  tahun:float):
         
         self.province_name=province_name
         self.nama_komoditas=nama_komoditas
-        self.Tn=Tn
-        self.Tx=Tx
+#        self.Tn=Tn
+#        self.Tx=Tx
         self.Tavg=Tavg
-        self.RH_avg=RH_avg
+#        self.RH_avg=RH_avg
         self.RR=RR
         self.ss=ss
-        self.ff_x=ff_x
-        self.ddd_x=ddd_x
-        self.ff_avg=ff_avg
+#        self.ff_x=ff_x
+#        self.ddd_x=ddd_x
+#        self.ff_avg=ff_avg
         self.luar_wilayah_hektar=luar_wilayah_hektar
         self.tahun=tahun
     
@@ -61,15 +61,15 @@ class CustomData:
             custom_data_input_dict={
                 "province_name":[self.province_name],
                 "nama_komoditas":[self.nama_komoditas],
-                "Tn":[self.Tn],
-                "Tx":[self.Tx],
+#                "Tn":[self.Tn],
+#                "Tx":[self.Tx],
                 "Tavg":[self.Tavg],
-                "RH_avg":[self.RH_avg],
+#                "RH_avg":[self.RH_avg],
                 "RR":[self.RR],
                 "ss":[self.ss],
-                "ff_x":[self.ff_x],
-                "ddd_x":[self.ddd_x],
-                "ff_avg":[self.ff_avg],
+#                "ff_x":[self.ff_x],
+#                "ddd_x":[self.ddd_x],
+#                "ff_avg":[self.ff_avg],
                 "luar_wilayah_hektar":[self.luar_wilayah_hektar],
                 "tahun":[self.tahun]
             }

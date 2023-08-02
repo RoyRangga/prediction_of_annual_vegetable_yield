@@ -23,11 +23,12 @@ class DataTransformation:
 
     def get_data_transformation_object(self):
         try:
-            numerical_columns=[
-                'Tn', 'Tx', 'Tavg',
-                'RH_avg', 'RR', 'ss',
-                'ff_x', 'ddd_x', 'ff_avg', 
-                'tahun','luar_wilayah_hektar']
+#            numerical_columns=[
+#                'Tn', 'Tx', 'Tavg',
+#                'RH_avg', 'RR', 'ss',
+#                'ff_x', 'ddd_x', 'ff_avg', 
+#                'tahun','luar_wilayah_hektar']
+            numerical_columns=['Tavg','RR','ss','tahun','luar_wilayah_hektar']
             categorical_columns=['province_name', 'nama_komoditas']
 
             num_pipeline=Pipeline(
@@ -66,7 +67,8 @@ class DataTransformation:
             preprocessing_obj=self.get_data_transformation_object()
 
             target_column_name="hasil_panen"
-            numerical_columns=['Tn', 'Tx', 'Tavg','RH_avg', 'RR', 'ss', 'ff_x', 'ddd_x', 'ff_avg','tahun','luar_wilayah_hektar']
+#            numerical_columns=['Tn', 'Tx', 'Tavg','RH_avg', 'RR', 'ss', 'ff_x', 'ddd_x', 'ff_avg','tahun','luar_wilayah_hektar']
+            numerical_columns=['Tavg','RR','ss','tahun','luar_wilayah_hektar']
             categorical_columns=['province_name', 'nama_komoditas']
 
             input_feature_train_df=train_df.drop(columns=[target_column_name])
